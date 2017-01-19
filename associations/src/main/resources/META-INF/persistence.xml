@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="associations">
+	
+		<jta-data-source>java:/associationDS</jta-data-source>
+		<class>unidirectionnel.manyToMany.E</class>
+		<class>unidirectionnel.manyToMany.F</class>
+		<class>unidirectionnel.manyToOne.G</class>
+		<class>unidirectionnel.manyToOne.H</class>
+		<class>unidirectionnel.oneToMany.C</class>
+		<class>unidirectionnel.oneToMany.D</class>
+		<class>unidirectionnel.oneToOne.A</class>
+		<class>unidirectionnel.oneToOne.B</class>
+		<class>bidirectionnel.oneToOne.I</class>
+		<class>bidirectionnel.oneToOne.J</class>
+		<class>bidirectionnel.ManyToMany.K</class>
+		<class>bidirectionnel.ManyToMany.L</class>
+		<class>bidirectionnel.oneToMany.M</class>
+		<class>bidirectionnel.oneToMany.N</class>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+		</properties>
+		
+	</persistence-unit>
+</persistence>
