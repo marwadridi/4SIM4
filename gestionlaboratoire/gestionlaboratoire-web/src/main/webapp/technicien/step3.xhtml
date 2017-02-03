@@ -1,0 +1,37 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/template/template.xhtml">
+
+<ui:define name="content">
+
+	<h:form id="form">
+		<h:panelGrid columns="2">
+
+			<h:outputText value="nom" />
+			<h:outputText value="#{sbean.technicien.nom}" />
+
+			<h:outputText value="login" />
+			<h:outputText value="#{sbean.technicien.login}" />
+
+			<h:outputText value="password" />
+			<h:outputText value="#{sbean.technicien.password}" />
+
+			<h:outputText value="adresse" />
+			<h:outputText value="#{sbean.contact.adresse}" />
+
+			<h:outputText value="email" />
+			<h:outputText value="#{sbean.contact.email}" />
+
+
+		</h:panelGrid>
+		<h:commandButton actionListener="#{sbean.doAdd()}"
+		    value="add"
+			id="btn" />
+		<h:commandButton action="#{sbean.doCancel()}" 
+		value="cancel" />
+		<h:message for="btn" />
+	</h:form>
+</ui:define>
+</ui:composition>
