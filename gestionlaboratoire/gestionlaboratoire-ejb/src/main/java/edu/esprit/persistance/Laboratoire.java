@@ -16,6 +16,7 @@ public class Laboratoire implements Serializable {
 
 	   
 	@Id
+	
 	private int id;
 	private String nom;
 	private String adresse;

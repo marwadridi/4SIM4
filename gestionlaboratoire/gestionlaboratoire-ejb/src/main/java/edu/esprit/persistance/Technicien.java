@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 
 /**
@@ -17,7 +18,7 @@ public class Technicien extends Utilisateur implements Serializable {
 	private String specialite;
 	private static final long serialVersionUID = 1L;
 
-	@ManyToMany
+	@ManyToMany(fetch=FetchType.EAGER)
 	private List<Competence> competences;
 
 	public Technicien() {
