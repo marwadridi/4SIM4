@@ -6,6 +6,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import edu.esprit.persistance.Contact;
 import edu.esprit.persistance.Technicien;
 import edu.esprit.persistance.Utilisateur;
 import edu.esprit.services.UtilisateurServiceRemote;
@@ -57,6 +58,25 @@ public class UtilisateurServiceTest {
 		
 		Utilisateur x = proxy.identifierUtilisateur("user1", "pass");
 		//System.out.println(x.getNom());
+	
+	
+	/*
+	 * test cascade ;
+	 * 
+	 */
+	
+	Technicien technicien2 = new Technicien();
+	Contact contact = new Contact();
+	
+	technicien2.setNom("x");
+	contact.setAdresse("xxx");
+	
+	technicien2.setContact(contact);
+	
+	
+	
+	proxy.ajouterUtilisateur(technicien2);
+	
 	}
 
 }
